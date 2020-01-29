@@ -4,7 +4,9 @@ export default function TodoEntryForm( { adder }) {
   const [content, setContent] = useState('');
   function submit(e) {
     e.preventDefault();
+    if(content.trim()){
     adder({ id: Math.random(), content });
+    }
     setContent('');
   }
   return (
