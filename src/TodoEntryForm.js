@@ -7,7 +7,8 @@ export default function TodoEntryForm( { adder }) {
   function submit(e) {
     e.preventDefault();
     if(content.trim()){
-    adder({ uiid: uuidv4(), content });
+      console.log("if in submit")
+      adder({ id: uuidv4(), content });
     }
     setContent('');
   }
